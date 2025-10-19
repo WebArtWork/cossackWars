@@ -51,6 +51,96 @@ const routes: Routes = [
 		children: [
 			/* user */
 			{
+				path: 'effects',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Effects'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarseffect/pages/effects/effects.routes').then(r => r.effectsRoutes)
+			}, 
+			{
+				path: 'spaces',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Spaces'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsspace/pages/spaces/spaces.routes').then(r => r.spacesRoutes)
+			}, 
+			{
+				path: 'cards',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Cards'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarscard/pages/cards/cards.routes').then(r => r.cardsRoutes)
+			}, 
+			{
+				path: 'units',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Units'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsunit/pages/units/units.routes').then(r => r.unitsRoutes)
+			}, 
+			{
+				path: 'resources',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Resources'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsresource/pages/resources/resources.routes').then(r => r.resourcesRoutes)
+			}, 
+			{
+				path: 'leaders',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Leaders'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsleader/pages/leaders/leaders.routes').then(r => r.leadersRoutes)
+			}, 
+			{
+				path: 'kingdoms',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Kingdoms'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarskingdom/pages/kingdoms/kingdoms.routes').then(r => r.kingdomsRoutes)
+			}, 
+			{
+				path: 'games',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Games'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsgame/pages/games/games.routes').then(r => r.gamesRoutes)
+			}, 
+			{
+				path: 'game',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Game'
+					}
+				},
+				loadChildren: () => import('./modules/cossackwarsgame/pages/game/game.routes').then(r => r.gameRoutes)
+			}, 
+			{
 				path: 'profile',
 				canActivate: [MetaGuard],
 				data: {

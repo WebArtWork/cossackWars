@@ -5,10 +5,10 @@
 				<a
 					routerLinkActive="_activeLink"
 					(click)="showSidebar = false"
-					routerLink="/profile"
+					routerLink="/gameplay"
 					class="nav__a"
 				>
-					<span class="material-icons">home</span>
+					<span class="material-icons">extension</span>
 				</a>
 			</li>
 			<li class="nav__li _burger" (click)="showSidebar = !showSidebar">
@@ -85,6 +85,94 @@
 				>
 					<span class="material-icons">translate</span>
 					<span translate>Theme.Translates</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/games"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">sports_esports</span>
+					<span translate>Theme.Games</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/kingdoms"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">castle</span>
+					<span translate>Theme.Kingdoms</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/leaders"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">military_tech</span>
+					<span translate>Theme.Leaders</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/resources"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">inventory_2</span>
+					<span translate>Theme.Resources</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/units"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">groups</span>
+					<span translate>Theme.Units</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/cards"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">style</span>
+					<span translate>Theme.Cards</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/spaces"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">location_on</span>
+					<span translate>Theme.Spaces</span>
+				</a>
+				<a
+					[routerLinkActiveOptions]="{ exact: true }"
+					routerLinkActive="_activeLink"
+					routerLink="/admin/effects"
+					class="nav__burger-link"
+					*ngIf="us.role('admin')"
+					(click)="hideSidebar()"
+				>
+					<span class="material-icons">auto_awesome</span>
+					<span translate>Theme.Effects</span>
 				</a>
 				<hr *ngIf="us.role('admin')" />
 			</div>
